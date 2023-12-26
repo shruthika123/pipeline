@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('call this job only') {
+            steps {
+                sh 'echo "This is the first job"'
+                sh 'echo "This is the second job"'
+                sh 'echo "This is the third job"'
+            }
+        }
+        stage('2nd job') {
+            steps {
+                sh 'echo "shruthika"'
+            }
+        }
+    }
+}
